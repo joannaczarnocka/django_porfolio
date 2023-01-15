@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+   <meta charset="UTF-8">
+   <title>{% block title %}Title{% endblock %}</title>
+   <!--link rel="stylesheet" href="{% static 'css/styles.css' %}"-->
+   <style>
+
+
+a.act1{
+background:blue;
+color:yellow;
+}
+
+
+ul, ul li {
+	display: block;
+	list-style: none;
+	margin: 1px;
+	padding: 1px;
+}
+
+ul {
+	float: left;
+	background-color: #fff;
+	padding: 1px 0px 1px 1px;
+	border: 1px solid #000;
+}
+
+ul li {
+	float: left;
+}
+
+
+   </style>
+</head>
+<body>
+<div id="content">
+ <h1>Homepage</h1>
+   <div id="header">
+	   <ul>
+       <li><a href="/" {% if request.path == '/' %} class="act1"{% endif %}>Home</a></li>
+	   <li><a href="me" {% if request.path == '/me' %} class="act1"{% endif %}>Me</a></li>
+	   <li><a href="contact" {% if request.path == '/contact' %} class="act1"{% endif %}>Contact</a></li>
+	   </ul>
+   </div>
+   <BR><BR>
+    <div id="inner-content">
+       {% block content %}
+       {% endblock %}
+   </div>
+</div>
+</body>
+</html>

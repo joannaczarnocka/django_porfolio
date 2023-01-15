@@ -1,0 +1,13 @@
+{% extends "infos/main.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+   <p>Biography of  {{name}}: was born in New York on 01.04.YYYY. 
+     <img src="{% static "images/person.jpg" %}" height="200" alt="Person" />
+	 <br>
+   Worked for AAA, BB,CCCC, DDD.</p>  
+{% endblock %}
