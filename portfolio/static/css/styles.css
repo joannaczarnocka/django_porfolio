@@ -1,0 +1,23 @@
+a.act1{
+background:blue;
+color:yellow;
+}
+
+
+ul, ul li {
+	display: block;
+	list-style: none;
+	margin: 1px;
+	padding: 1px;
+}
+
+ul {
+	float: left;
+	background-color: #fff;
+	padding: 1px 0px 1px 1px;
+	border: 1px solid #000;
+}
+
+ul li {
+	float: left;
+}

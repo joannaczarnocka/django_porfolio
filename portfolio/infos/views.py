@@ -5,27 +5,24 @@ from django.template import Context, loader
 name = "FirstName1 LastName1"
 
 def general(request):
-	c = {"name": name, "title": "Homepage"}
 	return render(
 		request=request,
 		template_name="infos/general.html",
-		context=c
+		context={"name": name, "title": "Homepage"}
 	)
 
 def me(request):
-	c = {"name": name, "title": "About me"}
 	return render(
 		request=request,
 		template_name="infos/me.html",
-		context=c
+		context={"name": name, "title": "About me"}
 	)
 
 def contact(request):
-	c = {"name": name, "title": "Contact"}
 	return render(
 		request=request,
 		template_name="infos/contact.html",
-		context=c
+		context={"name": name, "title": "Contact"}
 	)
 
 
